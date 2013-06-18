@@ -59,13 +59,13 @@ void MotionEstimator::performFeatureDetection(Mat& frame)
     // Loop over the tracked points to reject some
     int numValid = 0;
     namedWindow("Feature Tracking");
-    //moveWindow("Feature Tracking", 1000, 300);
-	moveWindow("Feature Tracking", 2500, 300);
+    moveWindow("Feature Tracking", 1000, 300);
 
     for (size_t i = 0; i < points[1].size(); i++)  // check every feature point
     {
         if ( status[i] == 0 )
-            continue; // Don't consider points rejected by optical flow
+            continue;
+        // Don't consider points rejected by optical flow
         //            (status[i] &&
         //            (abs(points[0][i].x - points[1][i].x) +
         //            (abs(points[0][i].y - points[1][i].y)) > 2));
