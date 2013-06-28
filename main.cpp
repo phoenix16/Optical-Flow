@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
 {
     if (argc != 2)
     {
-        cout << "Usage: ./OpticalFlow <Input Video file>" << endl;
+        cout << "Usage: ./Optical-Flow <Input Video file>" << endl;
         return -1;
     }
 
